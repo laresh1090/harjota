@@ -1,0 +1,9 @@
+<x-layout>
+    @include('partials._hero-one')
+    @include('partials._about-section')
+    @include('partials._team-section')    
+    @include('partials._cta-section')
+    @include('partials._approach-section')
+    @include('partials._approach-steps')
+    @include('partials._footer')
+</x-layout>

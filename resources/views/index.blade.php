@@ -1,0 +1,13 @@
+<x-layout>
+    @include('partials._hero')
+    @include('partials._services-carousel')
+    @include('partials._about-section')
+    @include('partials._team-section')
+    @include('partials._portfolio-section')
+    @include('partials._cta-section')
+    @include('partials._approach-section')
+    @include('partials._approach-steps')
+    @include('partials._hcontact-section')
+    @include('partials._stat-section')
+    @include('partials._footer')
+</x-layout>
