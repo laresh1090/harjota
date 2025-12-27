@@ -3,21 +3,21 @@
         <div class="row col-p30">
             <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 text-center">
                 <h2 class="title-medium title-uppercased hyt">
-                    How We Achieve Our Services for Clients
+                    The Harjota Approach
                 </h2>
             </div>
             <div class="col-sm-12 col-md-6 sm-box3">
                 <div class="section-gray section-boxed br4">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="title-medium mb20 hyt">Our Approach</h3>
+                            <h3 class="title-medium mb20 hyt">Our Methodology</h3>
                             <div class="br-bottom mb30"></div>
                             <p>
-                                At Skyllax Technologies, we take a collaborative and tailored approach to delivering our services. Here's how we achieve our services for clients:
+                                We follow a structured, phased approach that ensures clarity at every stage. From initial discovery through to ongoing enablement, each step builds on the previous to create lasting institutional change.
                             </p>
                             <div class="mb30"></div>
                             <p class="mb0">
-                                <a href="{{ route('contact') }}" class="btn-e">Contact Us</a>
+                                <a href="{{ route('about') }}" class="btn-e">Learn More</a>
                             </p>
                         </div>
                     </div>
@@ -27,14 +27,14 @@
                 <div class="mb20"></div>
                 @foreach ([
                     [
-                        'icon' => 'icon_box-checked',
-                        'title' => 'Discovery and Analysis',
-                        'description' => 'We work closely with clients to understand their unique needs, challenges, and goals.'
+                        'icon' => 'icon_search',
+                        'title' => '1. Audit & Discovery',
+                        'description' => 'Comprehensive assessment of your current state—decisions, data, processes, and systems.'
                     ],
                     [
-                        'icon' => 'icon_box-checked',
-                        'title' => 'Solution Design',
-                        'description' => "Our team designs customized solutions that meet the client's specific requirements."
+                        'icon' => 'icon_flowchart',
+                        'title' => '2. Architecture & Roadmap',
+                        'description' => 'Design foundational frameworks and create a prioritized strategic plan.'
                     ]
                 ] as $step)
                     <div class="mb50"></div>
@@ -43,7 +43,6 @@
                         :title="$step['title']"
                         :description="$step['description']"
                     />
-                    
                 @endforeach
             </div>
         </div>

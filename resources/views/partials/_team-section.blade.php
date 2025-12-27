@@ -9,7 +9,7 @@
                                 'image' => 'i/a33.png',
                                 'name' => 'Oladiran Abimbola',
                                 'title' => 'C.E.O / Chief Cyber Security Expert',
-                                'url' => route('employee', ['id' => 'oladiran']),
+                                'url' => '#',
                                 'socials' => [
                                     ['url' => '#', 'icon' => 'social_twitter'],
                                     ['url' => '#', 'icon' => 'social_facebook'],
@@ -20,7 +20,7 @@
                                 'image' => 'i/a22.png',
                                 'name' => 'Olanrewaju Opeyemi',
                                 'title' => 'C.O.O / Head Of Software Engineering & AI Programming',
-                                'url' => route('employee', ['id' => 'olanrewaju']),
+                                'url' => '#',
                                 'socials' => [
                                     ['url' => '#', 'icon' => 'social_twitter'],
                                     ['url' => '#', 'icon' => 'social_facebook'],
@@ -31,7 +31,7 @@
                                 'image' => 'i/a111.png',
                                 'name' => 'Keanna Ralph',
                                 'title' => 'Head of Business Development & Marketing',
-                                'url' => route('employee', ['id' => 'keanna']),
+                                'url' => '#',
                                 'socials' => [
                                     ['url' => '#', 'icon' => 'social_twitter'],
                                     ['url' => '#', 'icon' => 'social_facebook'],

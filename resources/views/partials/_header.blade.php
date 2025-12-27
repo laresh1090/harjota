@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-7">
                     <p class="text-2 mb0 color-inherit fix1">
-                        <span><i class="icon icon_pin_alt"></i> Vibranium valley, concord, Ikeja, Lagos</span>
+                        <span><i class="icon icon_pin_alt"></i> Vibranium Valley, Concord, Ikeja, Lagos</span>
                         <span class="mr30"> &nbsp; </span>
                         <i class="icon icon_phone"></i> +234 906 858 4115
                     </p>
@@ -13,13 +13,11 @@
                     <div class="clearfix">
                         <div class="pull-right">
                             <x-social-icons :icons="[
-                                ['url' => '#', 'icon' => 'social_twitter'],
-                                ['url' => '#', 'icon' => 'social_facebook'],
-                                ['url' => '#', 'icon' => 'social_googleplus'],
-                                ['url' => '#', 'icon' => 'social_pinterest'],
-                                ['url' => '#', 'icon' => 'social_linkedin'],
+                                ['url' => 'https://www.instagram.com/harjota.tech/', 'icon' => 'social_instagram'],
+                                ['url' => 'https://web.facebook.com/harjota.tech', 'icon' => 'social_facebook'],
+                                ['url' => 'https://www.linkedin.com/company/110416131/', 'icon' => 'social_linkedin'],
                             ]"
-                                class="social-icon"                                
+                                class="social-icon"
                             />
                         </div>
                     </div>
@@ -36,8 +34,8 @@
                         <div class="menu-wrapper">
                             <div class="logo-wrapper">
                                 <a href="{{ route('home') }}" class="logo">
-                                    <img src="{{ asset('harjota_logo.svg') }}" class="logo-img logo-dark" alt="Logo" loading fingerprints="lazy">
-                                    <img src="{{ asset('harjota_logo.svg') }}" class="logo-img" alt="Logo" loading="lazy">
+                                    <img src="{{ asset('harjota_logo.svg') }}" class="logo-img logo-dark" alt="Harjota Logo" loading="lazy">
+                                    <img src="{{ asset('harjota_logo.svg') }}" class="logo-img" alt="Harjota Logo" loading="lazy">
                                 </a>
                             </div>
                             <nav class="navbar-right">
@@ -53,32 +51,19 @@
                                         <a href="{{ route('home') }}" class="switch">Home</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('about') }}" class="switch">About Us</a>
+                                        <a href="{{ route('about') }}" class="switch">About</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="">Services <i class="icon icon-direction icon_plus"></i></a>
-                                        <x-submenu :items="[
-                                            ['url' => route('services.business-intelligence'), 'title' => 'Business Intelligence Applications'],
-                                            ['url' => route('services.industrial'), 'title' => 'Industrial-Strength Software Solutions'],
-                                            ['url' => route('services.cybersecurity'), 'title' => 'Cybersecurity'],
-                                            ['url' => route('services.business-development'), 'title' => 'Business Development'],
-                                            ['url' => route('services.smart-home'), 'title' => 'Smart Home Technology'],
-                                        ]" />
+                                        <a href="{{ route('services') }}" class="switch">Services</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="">Consultation <i class="icon icon-direction icon_plus"></i></a>
-                                        <x-submenu :items="[
-                                            ['url' => route('consultation.it-strategy'), 'title' => 'IT strategy and planning'],
-                                            ['url' => route('consultation.digital-branding'), 'title' => 'Digital Branding & transformation'],
-                                            ['url' => route('consultation.business-optimization'), 'title' => 'Business Development & optimization'],
-                                            ['url' => route('consultation.cybersecurity'), 'title' => 'Cybersecurity'],
-                                        ]" />
+                                        <a href="{{ route('products') }}" class="switch">Products</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('portfolio') }}"  class="switch">Portfolio</a>
+                                        <a href="{{ route('insights') }}" class="switch">Insights</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('contact') }}" class="switch">Contact Us</a>
+                                        <a href="{{ route('contact') }}" class="switch">Schedule Consultation</a>
                                     </li>
                                 </ul>
                             </nav>

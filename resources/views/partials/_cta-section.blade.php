@@ -4,17 +4,35 @@
         <div class="row mt40 sm-m0">
             <div class="col-sm-7 col-md-6">
                 <div class="bg-box">
+                    <span class="free-badge"><i class="fa fa-gift"></i> Free 30-Min Consultation</span>
                     <h3 class="title-medium color-on-img mb20 text-capitalize hyt">
-                        Turn Your Business Idea into the Next Big Success!
+                        Ready to Bring Clarity to Your Organization?
                     </h3>
                     <div class="br-bottom mb30"></div>
                     <p>
-                        Got a game-changing idea but unsure how to bring it to life? The right strategy, execution, and technology can turn your vision into a thriving business. Whether you're launching a startup or scaling an existing venture, now is the time to take action. Don't let your idea stay just an idea—transform it into the next industry disruptor. Let’s make it happen!
+                        Let's discuss how institutional intelligence can transform your operations, strengthen your decisions, and position your organization for sustainable growth.
                     </p>
                     <div class="mb30"></div>
-                    <a href="{{ route('contact') }}" class="btn-e">Contact Us Today</a>
+                    <a href="javascript:void(0)" onclick="openCalendly()" class="btn-e">Book Your Free Consultation</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+.free-badge {
+    display: inline-block;
+    background: #DAA520;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.free-badge i {
+    margin-right: 6px;
+}
+</style>

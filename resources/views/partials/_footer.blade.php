@@ -1,73 +1,186 @@
-         <!-- Footer -->
-        <!-- ============================================= -->
-        <footer class="footer-wrapper footer-background style-2 bg-img bg31 stellar" data-stellar-background-ratio="0.4">
-            <div class="bg-overlay gradient-2"></div>
-            <div class="container">
-                <div class="row col-p30">
-                    <div class="col-sm-12 col-md-4">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">About us</h3>
-                            <p>At Skyllax Technologies, we're passionate about harnessing the power of technology to drive business growth and innovation. We  help your organization transform complex data into actionable intelligence. 
-                            </p>
-                            <p class="mb0"><a href="#" class="read-more">read more <i class="icon arrow_carrot-2right"></i></a></p>
-                        </div>
+<!-- Footer -->
+<footer class="footer-wrapper footer-dark">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <!-- About Column -->
+                <div class="col-md-4 col-sm-6 mb30">
+                    <div class="footer-brand">
+                        <img src="{{ asset('harjota_logo.svg') }}" alt="Harjota" class="footer-logo" style="height: 40px; margin-bottom: 20px;">
                     </div>
-                    <div class="col-sm-12 col-md-4">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">Get in touch</h3>
-                            <address class="contact-widget">
-                                <p><i class="icon icon_pin_alt"></i> Vibranium valley, concord, H88H+5X6 IKEJA, Lagos</p>
-                                <p><i class="icon icon_mail_alt"></i> info@skyllax.com</p>
-                                <p><i class="icon icon_phone"></i> 0802 265 0610</p>
-                            </address>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-                        <div class="footer-widget">
-                            <h3 class="footer-title">Be Social</h3>
-                            <div class="clearfix">
-                                <x-social-icons
-                                :icons="[
-                                    ['url' => 'https://twitter.com', 'icon' => 'social_twitter'],
-                                    ['url' => 'https://facebook.com', 'icon' => 'social_facebook'],
-                                    ['url' => 'https://plus.google.com', 'icon' => 'social_googleplus'],
-                                    ['url' => 'https://pinterest.com', 'icon' => 'social_pinterest'],
-                                    ['url' => 'https://instagram.com', 'icon' => 'social_instagram'],
-                                    ['url' => 'https://dribbble.com', 'icon' => 'social_dribbble'],
-                                ]"
-                                class="footer-social"
-                                baseClass=""
-                            />
-                            </div>
-                            <div class="mb40"></div>
-                            <a href="#" class="btn-e">Contact us</a>
-                        </div>
+                    <p class="footer-desc">We help organizations embed clarity, decision intelligence, and operational continuity into their core systems.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/harjota.tech/" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://web.facebook.com/harjota.tech" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/110416131/" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <div class="sub-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-sm-push-6 col-md-push-6">
-                            <div class="clearfix">
-                                <div class="pull-right xs-pull-left">
-                                    <ul class="footer-links">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Business Intelligence Applications</a></li>
-                                        <li><a href="#">Industrial-Strength Software Solutions</a></li>
-                                        <li><a href="#">Cybersecurity</a></li>
-                                        <li><a href="#">Consultation</a></li>
-                                        <li><a href="#">Business Development</a></li>
-                                        <li><a href="#">Smart Home Technology </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-sm-pull-6 col-md-pull-6">
-                            <p class="copyright">&copy; &nbsp; Copyright 2025 @ Skyllax</p>
-                        </div>
-                    </div>
+                <!-- Quick Links -->
+                <div class="col-md-2 col-sm-6 mb30">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About</a></li>
+                        <li><a href="{{ route('services') }}">Services</a></li>
+                        <li><a href="{{ route('products') }}">Products</a></li>
+                        <li><a href="{{ route('insights') }}">Insights</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-md-3 col-sm-6 mb30">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ route('services') }}">Institutional Audit</a></li>
+                        <li><a href="{{ route('services') }}">Systems Architecture</a></li>
+                        <li><a href="{{ route('services') }}">Digital Infrastructure</a></li>
+                        <li><a href="{{ route('services') }}">BI & AI Enablement</a></li>
+                        <li><a href="{{ route('services') }}">Advisory Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-3 col-sm-6 mb30">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            <span>Vibranium Valley, Concord,<br>Ikeja, Lagos, Nigeria</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>+234 906 858 4115</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>info@harjota.com</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p class="copyright">&copy; {{ date('Y') }} Harjota. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 col-sm-12 text-right">
+                    <p class="footer-tagline">Institutional Intelligence & Digital Systems</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.footer-wrapper.footer-dark {
+    background: #1a1a1a;
+    color: #b0b0b0;
+}
+
+.footer-main {
+    padding: 60px 0 40px;
+}
+
+.footer-heading {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b0b0b0;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: #DAA520;
+    border-color: #DAA520;
+    color: #fff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: #b0b0b0;
+    font-size: 14px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    color: #DAA520;
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.footer-contact li i {
+    color: #DAA520;
+    margin-top: 3px;
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom .copyright,
+.footer-bottom .footer-tagline {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom .text-right {
+        text-align: left !important;
+        margin-top: 10px;
+    }
+}
+</style>

@@ -5,19 +5,19 @@
                 <div class="mb20"></div>
                 @foreach ([
                     [
-                        'icon' => 'icon_box-checked',
-                        'title' => 'Development and Implementation',
-                        'description' => 'We develop and implement the solution, ensuring seamless integration with existing systems.'
+                        'icon' => 'icon_tools',
+                        'title' => '3. Build & Implementation',
+                        'description' => 'We develop and implement custom platforms, dashboards, and systems tailored to your specific needs.'
                     ],
                     [
-                        'icon' => 'icon_box-checked',
-                        'title' => 'Testing and Quality Assurance',
-                        'description' => "Our team conducts rigorous testing and quality assurance to ensure the solution meets the client's expectations."
+                        'icon' => 'icon_check_alt2',
+                        'title' => '4. Testing & Quality Assurance',
+                        'description' => 'Rigorous testing ensures the solution meets your expectations and integrates seamlessly.'
                     ],
                     [
-                        'icon' => 'icon_box-checked',
-                        'title' => 'Deployment and Support',
-                        'description' => "We deploy the solution and provide ongoing support and maintenance to ensure the client's continued success."
+                        'icon' => 'icon_lifesaver',
+                        'title' => '5. Enablement & Support',
+                        'description' => 'Ongoing strategic support including training, documentation, and continuous improvement.'
                     ]
                 ] as $step)
                 <div class="mb50"></div>
@@ -25,11 +25,11 @@
                         :icon="$step['icon']"
                         :title="$step['title']"
                         :description="$step['description']"
-                    />                    
+                    />
                 @endforeach
             </div>
             <div class="col-sm-12 col-md-6 sm-box3">
-                <img src="{{ asset('i/ff.jpg') }}" alt="Service" loading="lazy">
+                <img src="{{ asset('i/ff.jpg') }}" alt="Harjota Approach" loading="lazy">
             </div>
         </div>
     </div>

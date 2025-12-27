@@ -6,10 +6,10 @@
             <div class="col-sm-12">
                 <div class="row">
                     @foreach ([
-                        ['value' => 123, 'speed' => 4000, 'title' => 'Projects'],
-                        ['value' => 1850, 'speed' => 4000, 'title' => 'Happy Customers'],
-                        ['value' => 1768, 'speed' => 4000, 'title' => 'Support Tickets'],
-                        ['value' => 58, 'speed' => 3500, 'title' => 'Employees']
+                        ['value' => 50, 'speed' => 4000, 'title' => 'Audits Completed'],
+                        ['value' => 35, 'speed' => 4000, 'title' => 'Organizations Served'],
+                        ['value' => 100, 'speed' => 4000, 'title' => 'Systems Designed'],
+                        ['value' => 98, 'speed' => 3500, 'title' => 'Client Satisfaction %']
                     ] as $stat)
                         <x-stat-item
                             :value="$stat['value']"
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <a href="{{ route('quote') }}" class="btn-bottom">Get a quote</a>
+    <a href="{{ route('contact') }}" class="btn-bottom">Schedule a Consultation</a>
 </section>
 <div class="shadow3"></div>
 <div class="simple-hr mt20 mb30 xs-m0"></div>

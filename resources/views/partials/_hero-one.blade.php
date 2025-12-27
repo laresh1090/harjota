@@ -1,8 +1,8 @@
 <x-hero-one
-    title="About Us"
+    title="Who We Are"
     background="i/ss.jpg"
     :breadcrumbs="[
         ['url' => route('home'), 'title' => 'Home'],
-        ['url' => route('about'), 'title' => 'About Page']
+        ['url' => route('about'), 'title' => 'About']
     ]"
 />
