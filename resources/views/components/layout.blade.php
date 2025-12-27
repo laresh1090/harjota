@@ -83,13 +83,13 @@
 
     <!-- CSS files -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="libs/rs-plugin/css/settings.css" media="screen">
-    <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
-    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('libs/rs-plugin/css/settings.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('libs/magnific-popup/magnific-popup.css') }}">
+    <script src="{{ asset('sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('sweetalert2/dist/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
     <!-- Calendly Popup Widget -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -509,11 +509,11 @@
     <div class="check-media"></div>
 
     <!-- Javascript files -->
-    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../../../maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="libs/rs-plugin/js/revolution-slider.js"></script>
-    <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="{{ asset('libs/rs-plugin/js/revolution-slider.js') }}"></script>
+    <script src="{{ asset('libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 
     <!-- Calendly Popup Function -->
     <script>
