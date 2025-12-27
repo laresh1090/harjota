@@ -71,7 +71,7 @@
                 'category' => 'Decision Systems',
                 'date' => 'December 10, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop',
+                'image' => 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop',
                 'content' => '
                     <p class="lead">Research consistently shows that 50-70% of technology projects fail to meet their objectives. Understanding why helps organizations avoid common pitfalls.</p>
 
@@ -141,7 +141,7 @@
                 'category' => 'Institutional Intelligence',
                 'date' => 'December 5, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop',
+                'image' => 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=450&fit=crop',
                 'content' => '
                     <p class="lead">An Institutional Intelligence Audit is a structured assessment of your organization\'s systems, processes, and knowledge flows. Here\'s how to prepare for maximum value.</p>
 
