@@ -28,7 +28,7 @@
                 @foreach ([
                     [
                         'slug' => 'what-is-institutional-intelligence',
-                        'image' => 'i/s1.gif',
+                        'image' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
                         'category' => 'Institutional Intelligence',
                         'title' => 'What is Institutional Intelligence?',
                         'excerpt' => 'Understanding how organizations can embed clarity, decision intelligence, and operational continuity into their core systems.',
@@ -36,7 +36,7 @@
                     ],
                     [
                         'slug' => '5-signs-your-organization-needs-a-digital-audit',
-                        'image' => 'i/s2.gif',
+                        'image' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
                         'category' => 'Digital Transformation',
                         'title' => '5 Signs Your Organization Needs a Digital Audit',
                         'excerpt' => 'Key indicators that suggest it\'s time to assess your digital infrastructure and operational systems.',
@@ -44,7 +44,7 @@
                     ],
                     [
                         'slug' => 'why-technology-projects-fail',
-                        'image' => 'i/s3.gif',
+                        'image' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop',
                         'category' => 'Decision Systems',
                         'title' => 'Why Technology Projects Fail (And How to Prevent It)',
                         'excerpt' => 'Common pitfalls in technology implementation and strategies for ensuring project success.',
@@ -52,7 +52,7 @@
                     ],
                     [
                         'slug' => 'the-true-cost-of-fragmented-systems',
-                        'image' => 'i/s4.gif',
+                        'image' => 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop',
                         'category' => 'Digital Transformation',
                         'title' => 'The True Cost of Fragmented Systems',
                         'excerpt' => 'How disconnected tools and data silos impact organizational efficiency and decision-making.',
@@ -60,7 +60,7 @@
                     ],
                     [
                         'slug' => 'how-to-prepare-for-an-institutional-intelligence-audit',
-                        'image' => 'i/s11.gif',
+                        'image' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
                         'category' => 'Institutional Intelligence',
                         'title' => 'How to Prepare for an Institutional Intelligence Audit',
                         'excerpt' => 'A practical guide to getting your organization ready for a comprehensive assessment.',
@@ -71,7 +71,7 @@
                     <div class="article-card">
                         <a href="{{ route('insights.show', $article['slug']) }}" class="article-image-link">
                             <div class="article-image">
-                                <img src="{{ asset($article['image']) }}" alt="{{ $article['title'] }}" loading="lazy">
+                                <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}" loading="lazy">
                                 <span class="article-category">{{ $article['category'] }}</span>
                             </div>
                         </a>

@@ -6,7 +6,7 @@
                 'category' => 'Institutional Intelligence',
                 'date' => 'December 15, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'i/s1.gif',
+                'image' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop',
                 'content' => '
                     <p class="lead">Institutional Intelligence is the systematic capability of an organization to capture, preserve, and leverage its collective knowledge, decisions, and operational patterns to drive sustainable growth and resilience.</p>
 
@@ -43,7 +43,7 @@
                 'category' => 'Digital Transformation',
                 'date' => 'December 12, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'i/s2.gif',
+                'image' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
                 'content' => '
                     <p class="lead">Digital transformation initiatives often fail not because of technology, but because organizations don\'t understand their current state. Here are five signs that indicate it\'s time for a comprehensive digital audit.</p>
 
@@ -71,7 +71,7 @@
                 'category' => 'Decision Systems',
                 'date' => 'December 10, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'i/s3.gif',
+                'image' => 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=450&fit=crop',
                 'content' => '
                     <p class="lead">Research consistently shows that 50-70% of technology projects fail to meet their objectives. Understanding why helps organizations avoid common pitfalls.</p>
 
@@ -107,7 +107,7 @@
                 'category' => 'Digital Transformation',
                 'date' => 'December 8, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'i/s4.gif',
+                'image' => 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=450&fit=crop',
                 'content' => '
                     <p class="lead">When systems don\'t talk to each other, the costs extend far beyond the obvious. Here\'s what fragmentation really costs your organization.</p>
 
@@ -141,7 +141,7 @@
                 'category' => 'Institutional Intelligence',
                 'date' => 'December 5, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'i/s11.gif',
+                'image' => 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=450&fit=crop',
                 'content' => '
                     <p class="lead">An Institutional Intelligence Audit is a structured assessment of your organization\'s systems, processes, and knowledge flows. Here\'s how to prepare for maximum value.</p>
 
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="article-featured-image">
-                        <img src="{{ asset($article['image']) }}" alt="{{ $article['title'] }}">
+                        <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
                     </div>
 
                     <div class="article-body">
@@ -253,7 +253,7 @@
                 <div class="col-md-4 col-md-offset-{{ $loop->first ? '2' : '0' }} col-sm-6 mb30">
                     <div class="article-card">
                         <div class="article-image">
-                            <img src="{{ asset($relatedArticle['image']) }}" alt="{{ $relatedArticle['title'] }}" loading="lazy">
+                            <img src="{{ $relatedArticle['image'] }}" alt="{{ $relatedArticle['title'] }}" loading="lazy">
                             <span class="article-category">{{ $relatedArticle['category'] }}</span>
                         </div>
                         <div class="article-content">
