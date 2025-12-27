@@ -71,7 +71,7 @@
                 'category' => 'Decision Systems',
                 'date' => 'December 10, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop',
+                'image' => 'harjota2.jpg',
                 'content' => '
                     <p class="lead">Research consistently shows that 50-70% of technology projects fail to meet their objectives. Understanding why helps organizations avoid common pitfalls.</p>
 
@@ -141,7 +141,7 @@
                 'category' => 'Institutional Intelligence',
                 'date' => 'December 5, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=450&fit=crop',
+                'image' => 'harjota.jpg',
                 'content' => '
                     <p class="lead">An Institutional Intelligence Audit is a structured assessment of your organization\'s systems, processes, and knowledge flows. Here\'s how to prepare for maximum value.</p>
 
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="article-featured-image">
-                        <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
+                        <img src="{{ str_starts_with($article['image'], 'http') ? $article['image'] : asset($article['image']) }}" alt="{{ $article['title'] }}">
                     </div>
 
                     <div class="article-body">
@@ -253,7 +253,7 @@
                 <div class="col-md-4 col-md-offset-{{ $loop->first ? '2' : '0' }} col-sm-6 mb30">
                     <div class="article-card">
                         <div class="article-image">
-                            <img src="{{ $relatedArticle['image'] }}" alt="{{ $relatedArticle['title'] }}" loading="lazy">
+                            <img src="{{ str_starts_with($relatedArticle['image'], 'http') ? $relatedArticle['image'] : asset($relatedArticle['image']) }}" alt="{{ $relatedArticle['title'] }}" loading="lazy">
                             <span class="article-category">{{ $relatedArticle['category'] }}</span>
                         </div>
                         <div class="article-content">

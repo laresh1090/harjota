@@ -44,7 +44,7 @@
                     ],
                     [
                         'slug' => 'why-technology-projects-fail',
-                        'image' => 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop',
+                        'image' => 'harjota2.jpg',
                         'category' => 'Decision Systems',
                         'title' => 'Why Technology Projects Fail (And How to Prevent It)',
                         'excerpt' => 'Common pitfalls in technology implementation and strategies for ensuring project success.',
@@ -60,7 +60,7 @@
                     ],
                     [
                         'slug' => 'how-to-prepare-for-an-institutional-intelligence-audit',
-                        'image' => 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop',
+                        'image' => 'harjota.jpg',
                         'category' => 'Institutional Intelligence',
                         'title' => 'How to Prepare for an Institutional Intelligence Audit',
                         'excerpt' => 'A practical guide to getting your organization ready for a comprehensive assessment.',
@@ -71,7 +71,7 @@
                     <div class="article-card">
                         <a href="{{ route('insights.show', $article['slug']) }}" class="article-image-link">
                             <div class="article-image">
-                                <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}" loading="lazy">
+                                <img src="{{ str_starts_with($article['image'], 'http') ? $article['image'] : asset($article['image']) }}" alt="{{ $article['title'] }}" loading="lazy">
                                 <span class="article-category">{{ $article['category'] }}</span>
                             </div>
                         </a>
