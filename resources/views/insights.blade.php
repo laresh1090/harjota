@@ -27,52 +27,59 @@
             <div class="row">
                 @foreach ([
                     [
+                        'slug' => 'what-is-institutional-intelligence',
                         'image' => 'i/s1.gif',
                         'category' => 'Institutional Intelligence',
                         'title' => 'What is Institutional Intelligence?',
                         'excerpt' => 'Understanding how organizations can embed clarity, decision intelligence, and operational continuity into their core systems.',
-                        'date' => 'December 2024'
+                        'date' => 'December 15, 2024'
                     ],
                     [
+                        'slug' => '5-signs-your-organization-needs-a-digital-audit',
                         'image' => 'i/s2.gif',
                         'category' => 'Digital Transformation',
                         'title' => '5 Signs Your Organization Needs a Digital Audit',
                         'excerpt' => 'Key indicators that suggest it\'s time to assess your digital infrastructure and operational systems.',
-                        'date' => 'December 2024'
+                        'date' => 'December 12, 2024'
                     ],
                     [
+                        'slug' => 'why-technology-projects-fail',
                         'image' => 'i/s3.gif',
                         'category' => 'Decision Systems',
                         'title' => 'Why Technology Projects Fail (And How to Prevent It)',
                         'excerpt' => 'Common pitfalls in technology implementation and strategies for ensuring project success.',
-                        'date' => 'December 2024'
+                        'date' => 'December 10, 2024'
                     ],
                     [
+                        'slug' => 'the-true-cost-of-fragmented-systems',
                         'image' => 'i/s4.gif',
                         'category' => 'Digital Transformation',
                         'title' => 'The True Cost of Fragmented Systems',
                         'excerpt' => 'How disconnected tools and data silos impact organizational efficiency and decision-making.',
-                        'date' => 'December 2024'
+                        'date' => 'December 8, 2024'
                     ],
                     [
+                        'slug' => 'how-to-prepare-for-an-institutional-intelligence-audit',
                         'image' => 'i/s11.gif',
                         'category' => 'Institutional Intelligence',
                         'title' => 'How to Prepare for an Institutional Intelligence Audit',
                         'excerpt' => 'A practical guide to getting your organization ready for a comprehensive assessment.',
-                        'date' => 'December 2024'
+                        'date' => 'December 5, 2024'
                     ]
                 ] as $article)
                 <div class="col-md-4 col-sm-6 mb40">
                     <div class="article-card">
-                        <div class="article-image">
-                            <img src="{{ asset($article['image']) }}" alt="{{ $article['title'] }}" loading="lazy">
-                            <span class="article-category">{{ $article['category'] }}</span>
-                        </div>
+                        <a href="{{ route('insights.show', $article['slug']) }}" class="article-image-link">
+                            <div class="article-image">
+                                <img src="{{ asset($article['image']) }}" alt="{{ $article['title'] }}" loading="lazy">
+                                <span class="article-category">{{ $article['category'] }}</span>
+                            </div>
+                        </a>
                         <div class="article-content">
                             <span class="article-date">{{ $article['date'] }}</span>
-                            <h4 class="article-title">{{ $article['title'] }}</h4>
+                            <h4 class="article-title"><a href="{{ route('insights.show', $article['slug']) }}">{{ $article['title'] }}</a></h4>
                             <p class="article-excerpt">{{ $article['excerpt'] }}</p>
-                            <a href="#" class="article-link">Read More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{{ route('insights.show', $article['slug']) }}" class="article-link">Read More <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -88,13 +95,17 @@
                 <div class="col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3 text-center">
                     <h3 class="title-uppercased hyt mb10">Get Insights Delivered</h3>
                     <p class="mb30">Subscribe to receive our latest articles and perspectives on institutional intelligence.</p>
-                    <form class="newsletter-form">
+                    <form class="newsletter-form" action="{{ route('subscribe') }}" method="POST">
+                        @csrf
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email address" required>
                             <span class="input-group-btn">
                                 <button type="submit" class="btn btn-primary">Subscribe</button>
                             </span>
                         </div>
+                        @if(session('success'))
+                        <p class="newsletter-success mt20">{{ session('success') }}</p>
+                        @endif
                     </form>
                     <p class="newsletter-note mt20">We respect your privacy. Unsubscribe at any time.</p>
                 </div>
@@ -156,11 +167,25 @@
     margin-bottom: 10px;
 }
 
+.article-image-link {
+    display: block;
+}
+
 .article-title {
     font-size: 18px;
     margin-bottom: 15px;
     color: #333;
     line-height: 1.4;
+}
+
+.article-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article-title a:hover {
+    color: #DAA520;
 }
 
 .article-excerpt {
@@ -212,6 +237,11 @@
 .newsletter-note {
     color: #999;
     font-size: 12px;
+}
+
+.newsletter-success {
+    color: #28a745;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
