@@ -12,8 +12,8 @@ deployment:
     # CONFIGURATION VARIABLES
     # =========================================
     # Update these paths based on your cPanel account structure
-    - export CPANEL_USERNAME=your_cpanel_username_here
-    - export DOMAIN=your_domain_here.com
+    - export CPANEL_USERNAME=mmvxydjp
+    - export DOMAIN=harjota.com
     - export REPO_ROOT=/home/$CPANEL_USERNAME/repositories/harjota
     - export PUBLIC_HTML=/home/$CPANEL_USERNAME/public_html
     - export APP_ROOT=/home/$CPANEL_USERNAME/laravel_app
