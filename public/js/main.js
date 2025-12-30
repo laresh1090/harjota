@@ -530,10 +530,10 @@ jQuery(document).ready(function($) {
 
 			$(".owl-columns2").owlCarousel({
 				itemsCustom: [[0,1],[767,1],[991,2]],
-				navigation:true,
+				navigation:false,
 				pagination:false,
-				autoplay:false,
-				navigationText:["<i class='icon arrow_carrot-left'></i>","<i class='icon arrow_carrot-right'></i>"],
+				autoPlay:8000,
+				stopOnHover:true,
 			});
 
 			$(".owl-columns1").owlCarousel({

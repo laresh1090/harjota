@@ -2,6 +2,7 @@
     @include('partials._hero')
     @include('partials._services-carousel')
     @include('partials._about-section')
+    @include('partials._problem-value-statement')
     @include('partials._approach-section')
     @include('partials._approach-steps')
     @include('partials._portfolio-section')

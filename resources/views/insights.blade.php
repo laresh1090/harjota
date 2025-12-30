@@ -44,7 +44,8 @@
                     ],
                     [
                         'slug' => 'why-technology-projects-fail',
-                        'image' => 'harjota2.jpg',
+                        'image' => 'images/optimized/harjota2',
+                        'optimized' => true,
                         'category' => 'Decision Systems',
                         'title' => 'Why Technology Projects Fail (And How to Prevent It)',
                         'excerpt' => 'Common pitfalls in technology implementation and strategies for ensuring project success.',
@@ -60,7 +61,8 @@
                     ],
                     [
                         'slug' => 'how-to-prepare-for-an-institutional-intelligence-audit',
-                        'image' => 'harjota.jpg',
+                        'image' => 'images/optimized/harjota',
+                        'optimized' => true,
                         'category' => 'Institutional Intelligence',
                         'title' => 'How to Prepare for an Institutional Intelligence Audit',
                         'excerpt' => 'A practical guide to getting your organization ready for a comprehensive assessment.',
@@ -71,7 +73,15 @@
                     <div class="article-card">
                         <a href="{{ route('insights.show', $article['slug']) }}" class="article-image-link">
                             <div class="article-image">
+                                @if(isset($article['optimized']) && $article['optimized'])
+                                <picture>
+                                    <source srcset="{{ asset($article['image'] . '.avif') }}" type="image/avif">
+                                    <source srcset="{{ asset($article['image'] . '.webp') }}" type="image/webp">
+                                    <img src="{{ asset($article['image'] . '.jpg') }}" alt="{{ $article['title'] }}" loading="lazy">
+                                </picture>
+                                @else
                                 <img src="{{ str_starts_with($article['image'], 'http') ? $article['image'] : asset($article['image']) }}" alt="{{ $article['title'] }}" loading="lazy">
+                                @endif
                                 <span class="article-category">{{ $article['category'] }}</span>
                             </div>
                         </a>

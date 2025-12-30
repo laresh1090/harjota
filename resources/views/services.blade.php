@@ -90,7 +90,7 @@
                     <div class="pricing-card">
                         <div class="pricing-card-header">
                             <span class="pricing-tier">Enterprise</span>
-                            <h4>Institutional Intelligence Audit</h4>
+                            <h4>Institutional Digital Intelligence Audit [IDIA]</h4>
                             <div class="pricing-amount range">
                                 <span class="price-range">₦2M - ₦5M</span>
                             </div>
@@ -112,6 +112,39 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDIA Clarification Section -->
+    <section class="section-bg mt0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 text-center">
+                    <h3 class="title-medium mb30">What is the Institutional Digital Intelligence Audit (IDIA)?</h3>
+                    <p class="mb40" style="font-size: 16px; line-height: 1.7; color: #666;">
+                        Our flagship Institutional Intelligence Audit (IDIA) is a comprehensive assessment framework
+                        that evaluates your organization across five critical dimensions to identify gaps, opportunities,
+                        and strategic priorities for institutional transformation.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ([
+                    ['icon' => 'fa-sitemap', 'title' => 'Decision Architecture', 'desc' => 'Who decides what, when, and with what data? We map your decision flows and identify bottlenecks.'],
+                    ['icon' => 'fa-cogs', 'title' => 'Process Maturity', 'desc' => 'How structured are your operations? We assess workflows, automation opportunities, and efficiency.'],
+                    ['icon' => 'fa-database', 'title' => 'Data Intelligence', 'desc' => 'Can you trust your data? We evaluate data quality, accessibility, and analytical capabilities.'],
+                    ['icon' => 'fa-laptop', 'title' => 'Technology Enablement', 'desc' => 'Do your systems support or hinder decisions? We audit your tech stack and integration.'],
+                    ['icon' => 'fa-users', 'title' => 'Knowledge Continuity', 'desc' => 'What happens when key people leave? We assess institutional knowledge preservation.']
+                ] as $dimension)
+                <div class="col-md-4 col-sm-6 col-xs-12 mb30">
+                    <div class="dimension-card">
+                        <i class="fa {{ $dimension['icon'] }} dimension-icon"></i>
+                        <h5>{{ $dimension['title'] }}</h5>
+                        <p>{{ $dimension['desc'] }}</p>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -199,6 +232,99 @@
                         </div>
                         @endif
                         @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retainer & Advisory Services -->
+    <section class="section-bg mt0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="title-uppercased hyt mb10">Ongoing Advisory & Support</h2>
+                    <p class="mb50">Partner with us for continuous strategic guidance and institutional support</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Essential Retainer -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="advisory-card">
+                        <div class="advisory-header">
+                            <h4>Essential Advisory</h4>
+                            <div class="pricing-amount">
+                                <span class="price-range">₦150K - ₦250K/month</span>
+                            </div>
+                            <p class="pricing-period">3-month minimum commitment</p>
+                        </div>
+                        <div class="advisory-body">
+                            <p class="pricing-desc">Ongoing strategic support for growing organizations</p>
+                            <ul class="pricing-list">
+                                <li><i class="fa fa-check"></i> Monthly strategy call (60 min)</li>
+                                <li><i class="fa fa-check"></i> Email support (48hr response)</li>
+                                <li><i class="fa fa-check"></i> Quarterly roadmap reviews</li>
+                                <li><i class="fa fa-check"></i> Ad-hoc guidance on decisions</li>
+                            </ul>
+                        </div>
+                        <div class="advisory-footer">
+                            <a href="{{ route('contact') }}" class="btn-slider">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Partner -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="advisory-card featured">
+                        <div class="pricing-badge">Recommended</div>
+                        <div class="advisory-header">
+                            <h4>Strategic Partner</h4>
+                            <div class="pricing-amount">
+                                <span class="price-range">₦350K - ₦500K/month</span>
+                            </div>
+                            <p class="pricing-period">6-month minimum commitment</p>
+                        </div>
+                        <div class="advisory-body">
+                            <p class="pricing-desc">Deep partnership for institutional transformation</p>
+                            <ul class="pricing-list">
+                                <li><i class="fa fa-check"></i> Everything in Essential</li>
+                                <li><i class="fa fa-check"></i> Bi-weekly sessions (2x 90 min)</li>
+                                <li><i class="fa fa-check"></i> Priority email support (24hr)</li>
+                                <li><i class="fa fa-check"></i> Governance design support</li>
+                                <li><i class="fa fa-check"></i> Digital strategy refinement</li>
+                                <li><i class="fa fa-check"></i> Team enablement guidance</li>
+                            </ul>
+                        </div>
+                        <div class="advisory-footer">
+                            <a href="{{ route('contact') }}" class="btn-slider main">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Institutional -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="advisory-card">
+                        <div class="advisory-header">
+                            <h4>Institutional Advisory</h4>
+                            <div class="pricing-amount">
+                                <span class="price-range">Custom Pricing</span>
+                            </div>
+                            <p class="pricing-period">12-month commitment</p>
+                        </div>
+                        <div class="advisory-body">
+                            <p class="pricing-desc">Enterprise-level strategic partnership</p>
+                            <ul class="pricing-list">
+                                <li><i class="fa fa-check"></i> Everything in Strategic Partner</li>
+                                <li><i class="fa fa-check"></i> Dedicated weekly sessions</li>
+                                <li><i class="fa fa-check"></i> On-demand support (4hr response)</li>
+                                <li><i class="fa fa-check"></i> Board presentation support</li>
+                                <li><i class="fa fa-check"></i> Custom framework development</li>
+                                <li><i class="fa fa-check"></i> Ongoing implementation oversight</li>
+                            </ul>
+                        </div>
+                        <div class="advisory-footer">
+                            <a href="{{ route('contact') }}" class="btn-slider">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -531,6 +657,106 @@
 
     .pricing-card.featured:hover {
         transform: translateY(-8px);
+    }
+}
+
+/* IDIA Dimension Cards */
+.dimension-card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+    min-height: 220px;
+}
+
+.dimension-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.dimension-icon {
+    font-size: 36px;
+    color: #DAA520;
+    margin-bottom: 15px;
+}
+
+.dimension-card h5 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.dimension-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Advisory/Retainer Cards */
+.advisory-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.advisory-card.featured {
+    border: 2px solid #DAA520;
+    transform: scale(1.05);
+}
+
+.advisory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.advisory-card.featured:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.advisory-header {
+    padding: 30px 25px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+}
+
+.advisory-header h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.advisory-body {
+    padding: 20px 25px 30px;
+}
+
+.advisory-footer {
+    padding: 0 25px 30px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .dimension-card {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    .advisory-card.featured {
+        transform: none;
+        margin: 20px 0;
+    }
+
+    .advisory-card.featured:hover {
+        transform: translateY(-5px);
     }
 }
 </style>

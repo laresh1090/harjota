@@ -89,7 +89,8 @@
     <link rel="stylesheet" href="{{ asset('libs/magnific-popup/magnific-popup.css') }}">
     <script src="{{ asset('sweetalert2/dist/sweetalert2.all.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('sweetalert2/dist/sweetalert2.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animations.css') }}">
 
     <!-- Calendly Popup Widget -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -106,7 +107,7 @@
         "logo": "{{ asset('harjota_logo.png') }}",
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+234-906-858-4115",
+            "telephone": "+234-906-757-4115",
             "contactType": "customer service",
             "email": "info@harjota.com",
             "areaServed": "NG",
@@ -124,6 +125,8 @@
         ]
     }
     </script>
+
+    @stack('head')
 
 <style>
 /* Floating Buttons Container */
@@ -513,7 +516,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="{{ asset('libs/rs-plugin/js/revolution-slider.js') }}"></script>
     <script src="{{ asset('libs/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/main.min.js') }}"></script>
 
     <!-- Calendly Popup Function -->
     <script>

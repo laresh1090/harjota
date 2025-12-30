@@ -1,0 +1,214 @@
+/* ===================================
+   HARJOTA WEBSITE ANIMATIONS
+   UI/UX Enhancement Animations
+   =================================== */
+
+/* Smooth Hover Lift Effect for All Cards */
+.pricing-card,
+.service-detail-box,
+.pillar-card,
+.dimension-card,
+.advisory-card,
+.coming-soon-item,
+.principle-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card:hover,
+.service-detail-box:hover,
+.pillar-card:hover,
+.dimension-card:hover,
+.advisory-card:hover,
+.coming-soon-item:hover,
+.principle-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* Button Hover Animations */
+.btn-slider,
+.btn-e,
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-slider:hover,
+.btn-e:hover,
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(218,165,32,0.3);
+}
+
+.btn-slider:active,
+.btn-e:active,
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Icon Rotation on Hover */
+.service-icon i,
+.pillar-icon,
+.dimension-icon,
+.coming-soon-icon i {
+    transition: transform 0.4s ease;
+}
+
+.service-detail-box:hover .service-icon i,
+.pillar-card:hover .pillar-icon,
+.dimension-card:hover .dimension-icon,
+.coming-soon-item:hover .coming-soon-icon i {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Engagement Step Animation */
+.engagement-step {
+    transition: all 0.3s ease;
+}
+
+.engagement-step:hover {
+    transform: scale(1.1);
+}
+
+.engagement-step:hover .step-number {
+    background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.step-number {
+    transition: all 0.3s ease;
+}
+
+.step-arrow i {
+    animation: arrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(10px);
+        opacity: 0.7;
+    }
+}
+
+/* Fade In on Scroll Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Staggered Animation for Lists */
+.feature-list li,
+.pricing-list li {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.feature-list li:nth-child(1),
+.pricing-list li:nth-child(1) { animation-delay: 0.1s; }
+.feature-list li:nth-child(2),
+.pricing-list li:nth-child(2) { animation-delay: 0.2s; }
+.feature-list li:nth-child(3),
+.pricing-list li:nth-child(3) { animation-delay: 0.3s; }
+.feature-list li:nth-child(4),
+.pricing-list li:nth-child(4) { animation-delay: 0.4s; }
+.feature-list li:nth-child(5),
+.pricing-list li:nth-child(5) { animation-delay: 0.5s; }
+.feature-list li:nth-child(6),
+.pricing-list li:nth-child(6) { animation-delay: 0.6s; }
+
+/* Check Icon Animation */
+.feature-list li i,
+.pricing-list li i {
+    transition: all 0.3s ease;
+}
+
+.feature-list li:hover i,
+.pricing-list li:hover i {
+    transform: scale(1.3);
+    color: #B8860B;
+}
+
+/* Badge Pulse Animation */
+.product-badge,
+.pricing-badge,
+.free-consultation-badge {
+    animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(218,165,32,0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(218,165,32,0);
+    }
+}
+
+/* Image Zoom on Hover */
+.product-image-placeholder img,
+.service-item img {
+    transition: transform 0.5s ease;
+}
+
+.product-image-wrapper:hover .product-image-placeholder img,
+.service-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Smooth Link Transitions */
+a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+/* Section Fade In */
+section {
+    opacity: 0;
+    animation: sectionFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes sectionFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .pricing-card:hover,
+    .service-detail-box:hover,
+    .pillar-card:hover,
+    .dimension-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .engagement-step:hover {
+        transform: scale(1.05);
+    }
+}

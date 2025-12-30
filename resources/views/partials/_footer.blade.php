@@ -50,7 +50,7 @@
                         </li>
                         <li>
                             <i class="fa fa-phone"></i>
-                            <span>+234 906 858 4115</span>
+                            <span>+234 906 757 4115</span>
                         </li>
                         <li>
                             <i class="fa fa-envelope"></i>

@@ -36,4 +36,35 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <!-- Insights Articles -->
+    <url>
+        <loc>https://harjota.com/insights/what-is-institutional-intelligence</loc>
+        <lastmod>2024-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://harjota.com/insights/5-signs-your-organization-needs-a-digital-audit</loc>
+        <lastmod>2024-12-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://harjota.com/insights/why-technology-projects-fail</loc>
+        <lastmod>2024-12-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://harjota.com/insights/the-true-cost-of-fragmented-systems</loc>
+        <lastmod>2024-12-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://harjota.com/insights/how-to-prepare-for-an-institutional-intelligence-audit</loc>
+        <lastmod>2024-12-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>

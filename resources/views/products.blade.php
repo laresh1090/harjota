@@ -28,7 +28,8 @@
                 <div class="col-sm-12 text-center">
                     <span class="product-badge dev">In Development</span>
                     <h2 class="title-uppercased hyt mb10">Academic Intelligence System</h2>
-                    <p class="mb50">AI-powered institutional intelligence for educational institutions</p>
+                    <p class="product-tagline mb20">The Operating System for Educational Institutions</p>
+                    <p class="mb50">Transform decision-making. Preserve institutional knowledge. Operate with competitive advantage.</p>
                 </div>
             </div>
             <div class="row">
@@ -41,6 +42,18 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="product-features">
+                        <!-- Differentiator Box -->
+                        <div class="differentiator-box mb30">
+                            <h5 style="font-size: 16px; font-weight: 600; color: #333; margin-bottom: 15px;">
+                                <i class="fa fa-star" style="color: #DAA520; margin-right: 8px;"></i>Unlike Generic BI Platforms
+                            </h5>
+                            <p style="font-size: 14px; line-height: 1.7; color: #666; margin: 0;">
+                                AIS captures and operationalizes your institution's accumulated knowledge,
+                                embedding decades of decision logic into executable AI. More than dashboards—
+                                <strong>institutional intelligence that survives leadership transitions.</strong>
+                            </p>
+                        </div>
+
                         <p class="mb30">A unified <strong>AI-powered Business Intelligence</strong> platform that transforms how educational institutions operate, make data-driven decisions, and preserve institutional knowledge through intelligent automation.</p>
                         <ul class="feature-list">
                             <li>
@@ -359,6 +372,23 @@
     color: #fff !important;
 }
 
+/* Product Tagline */
+.product-tagline {
+    font-size: 20px;
+    font-weight: 600;
+    color: #DAA520;
+    font-style: italic;
+}
+
+/* Differentiator Box */
+.differentiator-box {
+    background: linear-gradient(135deg, #fff9e6 0%, #fffbf0 100%);
+    border-left: 4px solid #DAA520;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(218,165,32,0.1);
+}
+
 @media (max-width: 768px) {
     .product-image-wrapper {
         min-height: 250px;
@@ -390,6 +420,10 @@
 
     .product-ctas .btn {
         width: 100%;
+    }
+
+    .product-tagline {
+        font-size: 18px;
     }
 }
 </style>

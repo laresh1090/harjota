@@ -71,7 +71,8 @@
                 'category' => 'Decision Systems',
                 'date' => 'December 10, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'harjota2.jpg',
+                'image' => 'images/optimized/harjota2',
+                'optimized' => true,
                 'content' => '
                     <p class="lead">Research consistently shows that 50-70% of technology projects fail to meet their objectives. Understanding why helps organizations avoid common pitfalls.</p>
 
@@ -141,7 +142,8 @@
                 'category' => 'Institutional Intelligence',
                 'date' => 'December 5, 2024',
                 'author' => 'Harjota Team',
-                'image' => 'harjota.jpg',
+                'image' => 'images/optimized/harjota',
+                'optimized' => true,
                 'content' => '
                     <p class="lead">An Institutional Intelligence Audit is a structured assessment of your organization\'s systems, processes, and knowledge flows. Here\'s how to prepare for maximum value.</p>
 
@@ -186,7 +188,55 @@
 
         // Get related articles (exclude current)
         $related = collect($articles)->filter(fn($a, $key) => $key !== $slug)->take(2)->toArray();
+
+        // Generate description from content (strip HTML and truncate)
+        $description = Str::limit(strip_tags($article['content']), 160);
+
+        // Parse date for schema
+        $dateForSchema = \Carbon\Carbon::parse($article['date'])->toIso8601String();
+
+        // Get image URL for schema
+        if (isset($article['optimized']) && $article['optimized']) {
+            $imageUrl = url($article['image'] . '.jpg');
+        } else {
+            $imageUrl = str_starts_with($article['image'], 'http') ? $article['image'] : url($article['image']);
+        }
     @endphp
+
+    @section('title', $article['title'] . ' - Insights | Harjota')
+
+    @push('head')
+    <!-- Article Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{ $article['title'] }}",
+        "description": "{{ $description }}",
+        "image": "{{ $imageUrl }}",
+        "datePublished": "{{ $dateForSchema }}",
+        "dateModified": "{{ $dateForSchema }}",
+        "author": {
+            "@type": "Organization",
+            "name": "{{ $article['author'] }}",
+            "url": "{{ url('/') }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Harjota",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ asset('harjota_logo.png') }}"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ url()->current() }}"
+        },
+        "articleSection": "{{ $article['category'] }}"
+    }
+    </script>
+    @endpush
 
     <x-hero-one
         :title="$article['title']"
@@ -206,13 +256,22 @@
                     <div class="article-header">
                         <span class="article-meta-category">{{ $article['category'] }}</span>
                         <div class="article-meta">
+                            <span><i class="fa fa-user"></i> By <strong>{{ $article['author'] }}</strong></span>
+                            <span style="margin: 0 10px;">•</span>
                             <span><i class="fa fa-calendar"></i> {{ $article['date'] }}</span>
-                            <span><i class="fa fa-user"></i> {{ $article['author'] }}</span>
                         </div>
                     </div>
 
                     <div class="article-featured-image">
+                        @if(isset($article['optimized']) && $article['optimized'])
+                        <picture>
+                            <source srcset="{{ asset($article['image'] . '.avif') }}" type="image/avif">
+                            <source srcset="{{ asset($article['image'] . '.webp') }}" type="image/webp">
+                            <img src="{{ asset($article['image'] . '.jpg') }}" alt="{{ $article['title'] }}">
+                        </picture>
+                        @else
                         <img src="{{ str_starts_with($article['image'], 'http') ? $article['image'] : asset($article['image']) }}" alt="{{ $article['title'] }}">
+                        @endif
                     </div>
 
                     <div class="article-body">
@@ -253,7 +312,15 @@
                 <div class="col-md-4 col-md-offset-{{ $loop->first ? '2' : '0' }} col-sm-6 mb30">
                     <div class="article-card">
                         <div class="article-image">
+                            @if(isset($relatedArticle['optimized']) && $relatedArticle['optimized'])
+                            <picture>
+                                <source srcset="{{ asset($relatedArticle['image'] . '.avif') }}" type="image/avif">
+                                <source srcset="{{ asset($relatedArticle['image'] . '.webp') }}" type="image/webp">
+                                <img src="{{ asset($relatedArticle['image'] . '.jpg') }}" alt="{{ $relatedArticle['title'] }}" loading="lazy">
+                            </picture>
+                            @else
                             <img src="{{ str_starts_with($relatedArticle['image'], 'http') ? $relatedArticle['image'] : asset($relatedArticle['image']) }}" alt="{{ $relatedArticle['title'] }}" loading="lazy">
+                            @endif
                             <span class="article-category">{{ $relatedArticle['category'] }}</span>
                         </div>
                         <div class="article-content">

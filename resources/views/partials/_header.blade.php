@@ -6,7 +6,7 @@
                     <p class="text-2 mb0 color-inherit fix1">
                         <span><i class="icon icon_pin_alt"></i> Vibranium Valley, Concord, Ikeja, Lagos</span>
                         <span class="mr30"> &nbsp; </span>
-                        <i class="icon icon_phone"></i> +234 906 858 4115
+                        <i class="icon icon_phone"></i> +234 906 757 4115
                     </p>
                 </div>
                 <div class="col-sm-5">
