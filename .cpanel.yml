@@ -1,0 +1,108 @@
+---
+# cPanel Deployment Configuration for Harjota Laravel Application
+# This file enables automatic deployment from GitHub to TrueHost cPanel hosting
+#
+# IMPORTANT: Update the following variables before deployment:
+# - CPANEL_USERNAME: Your cPanel username (e.g., 'harjota')
+# - DOMAIN: Your domain name (e.g., 'harjota.com' or 'harjota.truehost.cloud')
+
+deployment:
+  tasks:
+    # =========================================
+    # CONFIGURATION VARIABLES
+    # =========================================
+    # Update these paths based on your cPanel account structure
+    - export CPANEL_USERNAME=your_cpanel_username_here
+    - export DOMAIN=your_domain_here.com
+    - export REPO_ROOT=/home/$CPANEL_USERNAME/repositories/harjota
+    - export PUBLIC_HTML=/home/$CPANEL_USERNAME/public_html
+    - export APP_ROOT=/home/$CPANEL_USERNAME/laravel_app
+
+    # =========================================
+    # STEP 1: CREATE DIRECTORY STRUCTURE
+    # =========================================
+    # Create Laravel application directory outside public_html for security
+    - mkdir -p $APP_ROOT
+    - mkdir -p $APP_ROOT/storage/framework/{sessions,views,cache}
+    - mkdir -p $APP_ROOT/storage/logs
+    - mkdir -p $APP_ROOT/bootstrap/cache
+
+    # =========================================
+    # STEP 2: DEPLOY APPLICATION FILES
+    # =========================================
+    # Copy application files (exclude vendor, node_modules, .env)
+    - /bin/cp -R app $APP_ROOT/
+    - /bin/cp -R bootstrap $APP_ROOT/
+    - /bin/cp -R config $APP_ROOT/
+    - /bin/cp -R database $APP_ROOT/
+    - /bin/cp -R resources $APP_ROOT/
+    - /bin/cp -R routes $APP_ROOT/
+    - /bin/cp -R storage $APP_ROOT/
+    - /bin/cp artisan $APP_ROOT/
+    - /bin/cp composer.json $APP_ROOT/
+    - /bin/cp composer.lock $APP_ROOT/
+    - /bin/cp package.json $APP_ROOT/
+    - /bin/cp package-lock.json $APP_ROOT/
+
+    # =========================================
+    # STEP 3: DEPLOY PUBLIC ASSETS
+    # =========================================
+    # Copy public directory contents to public_html
+    - /bin/cp -R public/* $PUBLIC_HTML/
+
+    # Create symbolic link from public_html to Laravel public directory (alternative approach)
+    # Uncomment if you prefer symlink over copying files:
+    # - ln -sf $APP_ROOT/public/* $PUBLIC_HTML/
+
+    # =========================================
+    # STEP 4: SET PERMISSIONS
+    # =========================================
+    # Laravel requires write permissions for storage and bootstrap/cache
+    - chmod -R 755 $APP_ROOT/storage
+    - chmod -R 755 $APP_ROOT/bootstrap/cache
+
+    # Set ownership (if needed - cPanel usually handles this automatically)
+    # - chown -R $CPANEL_USERNAME:$CPANEL_USERNAME $APP_ROOT
+
+    # =========================================
+    # STEP 5: INSTALL DEPENDENCIES
+    # =========================================
+    # Install Composer dependencies (production mode)
+    - cd $APP_ROOT && /usr/local/bin/php /usr/local/bin/composer install --optimize-autoloader --no-dev --no-interaction
+
+    # Note: If composer is not available globally, you may need to:
+    # 1. Download composer.phar to your account
+    # 2. Use: cd $APP_ROOT && /usr/local/bin/php composer.phar install --optimize-autoloader --no-dev
+
+    # =========================================
+    # STEP 6: OPTIMIZE LARAVEL
+    # =========================================
+    # Cache configuration, routes, and views for better performance
+    - cd $APP_ROOT && /usr/local/bin/php artisan config:cache
+    - cd $APP_ROOT && /usr/local/bin/php artisan route:cache
+    - cd $APP_ROOT && /usr/local/bin/php artisan view:cache
+
+    # =========================================
+    # STEP 7: RUN MIGRATIONS (Optional)
+    # =========================================
+    # Uncomment if you want to run database migrations automatically
+    # WARNING: Only enable this if you're confident in your migrations
+    # - cd $APP_ROOT && /usr/local/bin/php artisan migrate --force
+
+    # =========================================
+    # STEP 8: CLEAR OLD CACHES (Maintenance)
+    # =========================================
+    # Clear application cache (useful for updates)
+    - cd $APP_ROOT && /usr/local/bin/php artisan cache:clear || true
+
+    # =========================================
+    # STEP 9: SET PRODUCTION MODE
+    # =========================================
+    # Ensure storage is linked (if using storage for public files)
+    - cd $APP_ROOT && /usr/local/bin/php artisan storage:link || true
+
+    # =========================================
+    # DEPLOYMENT COMPLETE
+    # =========================================
+    # Log deployment timestamp
+    - echo "Deployment completed at $(date)" >> $APP_ROOT/storage/logs/deployment.log
