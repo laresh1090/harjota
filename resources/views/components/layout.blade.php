@@ -9,7 +9,7 @@
         $routeName = request()->route()->getName() ?? 'home';
         $pageData = match ($routeName) {
             'home' => [
-                'title' => 'Harjota - Institutional Intelligence & Digital Systems',
+                'title' => 'Harjota - Institutional Intelligence Partner',
                 'description' => 'Harjota helps organizations embed clarity, decision intelligence, and operational continuity into their core systems. Expert consulting for sustainable growth.',
                 'keywords' => 'institutional intelligence, digital systems, business consulting, decision intelligence, Nigeria, Lagos'
             ],
@@ -39,7 +39,7 @@
                 'keywords' => 'contact harjota, free consultation, business consulting Lagos Nigeria'
             ],
             default => [
-                'title' => 'Harjota - Institutional Intelligence & Digital Systems',
+                'title' => 'Harjota - Institutional Intelligence Partner',
                 'description' => 'Harjota helps organizations embed clarity, decision intelligence, and operational continuity into their core systems.',
                 'keywords' => 'institutional intelligence, digital systems, business consulting'
             ]
@@ -102,7 +102,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Harjota",
-        "description": "Institutional Intelligence & Digital Systems company helping organizations embed clarity, decision intelligence, and operational continuity.",
+        "description": "Institutional Intelligence Partner company helping organizations embed clarity, decision intelligence, and operational continuity.",
         "url": "{{ url('/') }}",
         "logo": "{{ asset('harjota_logo.png') }}",
         "contactPoint": {

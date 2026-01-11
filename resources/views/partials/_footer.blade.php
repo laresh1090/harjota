@@ -6,9 +6,9 @@
                 <!-- About Column -->
                 <div class="col-md-4 col-sm-6 mb30">
                     <div class="footer-brand">
-                        <img src="{{ asset('harjota_logo.svg') }}" alt="Harjota" class="footer-logo" style="height: 40px; margin-bottom: 20px;">
+                        <img src="{{ asset('harjota_logo.svg') }}" alt="Harjota" class="footer-logo" style="width: 140px; height: auto; margin-bottom: 20px;">
                     </div>
-                    <p class="footer-desc">We help organizations embed clarity, decision intelligence, and operational continuity into their core systems.</p>
+                    <p class="footer-desc">Your partner for building systems that think, adapt, and endure.</p>
                     <div class="footer-socials">
                         <a href="https://www.instagram.com/harjota.tech/" target="_blank"><i class="fa fa-instagram"></i></a>
                         <a href="https://web.facebook.com/harjota.tech" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -70,7 +70,7 @@
                     <p class="copyright">&copy; {{ date('Y') }} Harjota. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 col-sm-12 text-right">
-                    <p class="footer-tagline">Institutional Intelligence & Digital Systems</p>
+                    <p class="footer-tagline">Institutional Intelligence Partner</p>
                 </div>
             </div>
         </div>

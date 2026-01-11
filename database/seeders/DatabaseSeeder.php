@@ -19,5 +19,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Seed the Business Intelligence Assessment
+        $this->call(BusinessIntelligenceAssessmentSeeder::class);
     }
 }

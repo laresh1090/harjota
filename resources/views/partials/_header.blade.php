@@ -63,7 +63,10 @@
                                         <a href="{{ route('insights') }}" class="switch">Insights</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('contact') }}" class="switch">Schedule Consultation</a>
+                                        <a href="{{ route('assessment.show', 'centralized-business-intelligence-assessment') }}" class="switch nav-assessment-link">Free Assessment</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('contact') }}" class="switch">Contact</a>
                                     </li>
                                 </ul>
                             </nav>

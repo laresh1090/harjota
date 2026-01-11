@@ -5,6 +5,14 @@
 
     RewriteEngine On
 
+    # Force WWW (redirect non-www to www)
+    RewriteCond %{HTTP_HOST} ^harjota\.com [NC]
+    RewriteRule ^(.*)$ https://www.harjota.com/$1 [L,R=301]
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

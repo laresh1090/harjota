@@ -14,9 +14,9 @@
             <div class="row col-p0">
                 <div class="col-sm-5 get-height">
                     <div class="mt80"></div>
-                    <h3 class="title-medium">
+                    <h2 class="title-medium">
                         Welcome to Harjota
-                    </h3>
+                    </h2>
                     <div class="br-bottom mb20"></div>
                     <p class="mb50">
                         Harjota is an Institutional Intelligence & Digital Systems company. We help organizations move beyond fragmented tools and reactive technology adoption by designing systems that embed clarity, decision intelligence, and operational continuity into their core operations.

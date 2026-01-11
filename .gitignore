@@ -22,3 +22,8 @@ yarn-error.log
 /.vscode
 /.zed
 config.zip
+storage.zip
+docs/questionnaire/
+planning-questionnaire-system-*/
+vendor.zip
+*.zip

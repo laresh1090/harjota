@@ -5,9 +5,9 @@
             <div class="col-sm-7 col-md-6">
                 <div class="bg-box">
                     <span class="free-badge"><i class="fa fa-gift"></i> Free 30-Min Consultation</span>
-                    <h3 class="title-medium color-on-img mb20 text-capitalize hyt">
+                    <h2 class="title-medium color-on-img mb20 text-capitalize hyt">
                         Ready to Bring Clarity to Your Organization?
-                    </h3>
+                    </h2>
                     <div class="br-bottom mb30"></div>
                     <p>
                         Let's discuss how institutional intelligence can transform your operations, strengthen your decisions, and position your organization for sustainable growth.

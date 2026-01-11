@@ -5,7 +5,7 @@
             <div class="col-sm-8 col-md-6">
                 <div class="bg-box light-default br0">
                     <div class="mb40 mt40">
-                        <h3 class="title-medium hyt">Get in touch</h3>
+                        <h2 class="title-medium hyt">Get in touch</h2>
                         <div class="br-bottom mb30"></div>
                         <ul class="list-2">
                             <li><span>Address:</span> Vibranium valley, concord, H88H+5X6 IKEJA, Lagos 100011</li>
